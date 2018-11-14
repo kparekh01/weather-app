@@ -1,0 +1,9 @@
+<h1>Welcome to the weather app</h1>
+
+
+<p>Please enter a zipcode and I'll give you the current, high and low tempatures for the day!</p>
+
+<%= form_tag('/app/weather') do -%>
+  <%= text_field_tag 'zipcode'%>
+  <div><%= submit_tag 'Get Forecast' %></div>
+<% end -%>
