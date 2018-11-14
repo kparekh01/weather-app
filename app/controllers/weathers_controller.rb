@@ -15,7 +15,7 @@ class WeathersController < ApplicationController
     lng = details["lng"]
 
     weather = Unirest.get("https://api.darksky.net/forecast/#{Rails.application.credentials.dark_sky_api}/#{lat},#{lng}").body
-    daily_temps = weather["hourly"]["data"].first(24).map{|hash| hash["temperature"].to_i}.sort
+    daily_temps = weather["hourly"]["data"].map{|hash| hash["temperature"].to_i}.sort
 
     @current_temp = weather["currently"]["temperature"] #current_temp
     @daily_high = daily_temps.last
