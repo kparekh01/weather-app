@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Follow instructions:
 
-Things you may want to cover:
+* clone repository locally
 
-* Ruby version
+* master.key is necessary to decrypt credentials ( provided via email as this is simply a test repo)
 
-* System dependencies
+* copy the master key and place it inside of a file named `master.key` inside of the config folder( OK to create file and paste key if you do not have file)
 
-* Configuration
+* `bundle` the app
 
-* Database creation
+* run the local server .. `rails s`
 
-* Database initialization
+* navigate to 'http://localhost:3000/app/weather' and enter your zip code
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* you should see the required results
